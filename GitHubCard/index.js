@@ -105,7 +105,20 @@ function cardMaker(obj) {
   userFollowers.textContent = `Followers: ${obj.followers}`;
   userFollowing.textContent = `Following: ${obj.following}`;
   userBio.textContent = `Bio: ${obj.bio}`;
+  linkText.textContent = `Github: ${obj.html_url}`;
+
+  // add attributes
+  userCard.classList.add("card");
+  cardInfo.classList.add("card-info");
+  userName.classList.add("name");
+  userUserName.classList.add("username");
+  userImg.src = obj.avatar_url;
+
+  // console.log(userCard);
+  return userCard;
 }
+
+cardContainer.appendChild(userCard(obj));
 
 /*
   List of LS Instructors Github username's:
